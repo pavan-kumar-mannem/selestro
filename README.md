@@ -10,7 +10,7 @@ A customizable multi-select dropdown widget with search functionality for Flutte
 - Smooth animations
 - Material Design styling
 - Form validation support
-
+- Pavan Kumar Mannem
 
 ## Installation
 
