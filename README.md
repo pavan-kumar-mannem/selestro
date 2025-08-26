@@ -40,10 +40,9 @@ Built with **MobX** for reactive state management, smooth animations, and form v
 
 ### Example
 
-|                                                   |                                                   |                                                   |
-| ------------------------------------------------- | ------------------------------------------------- | ------------------------------------------------- |
-| <img src="screenshots/image.png" width="220"/>    | <img src="screenshots/image(1).png" width="220"/> | <img src="screenshots/image(2).png" width="220"/> |
-| <img src="screenshots/image(3).png" width="220"/> |                                                   |                                                   |
+|                                                |                                                   |                                                   |                                                   |
+| ---------------------------------------------- | ------------------------------------------------- | ------------------------------------------------- | ------------------------------------------------- |
+| <img src="screenshots/image.png" width="200"/> | <img src="screenshots/image(1).png" width="200"/> | <img src="screenshots/image(2).png" width="200"/> | <img src="screenshots/image(3).png" width="200"/> |
 
 
 ---
