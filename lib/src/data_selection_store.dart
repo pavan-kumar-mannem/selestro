@@ -4,10 +4,16 @@ import 'dart:async';
 
 import 'package:mobx/mobx.dart';
 
-// Generate the store code with: flutter pub run build_runner build
+/// Generate the store code with: flutter pub run build_runner build
 part 'data_selection_store.g.dart';
 
-// Explicitly specify the generic type in the generated class
+/// A store that manages the selection state of items in
+/// the [CustomMultiSearch] widget.
+///
+/// This class uses MobX for reactive state management.
+/// It keeps track of active items, temporary selections,
+/// and provides utility methods for managing selections.
+
 class DataSelectionStore<T> = _DataSelectionStore<T>
     with _$DataSelectionStore<T>;
 
@@ -19,8 +25,12 @@ abstract class _DataSelectionStore<T> with Store {
   });
 
   final List<T> items;
-  final String Function(T) displayProperty; // Function to get display string
-  final String Function(T) filterProperty; // Function to get filter string
+  final String Function(T) displayProperty;
+
+  /// Function to get display string
+  final String Function(T) filterProperty;
+
+  /// Function to get filter string
 
   @observable
   String searchQuery = '';
@@ -50,7 +60,7 @@ abstract class _DataSelectionStore<T> with Store {
   @action
   void setSearchQuery(String query) {
     if (_debounce?.isActive ?? false) _debounce!.cancel();
-    _debounce = Timer(Duration(milliseconds: 300), () {
+    _debounce = Timer(const Duration(milliseconds: 300), () {
       searchQuery = query;
     });
   }
@@ -59,7 +69,7 @@ abstract class _DataSelectionStore<T> with Store {
   void toggleExpansion() {
     isExpanded = !isExpanded;
 
-    // When opening the container, populate selectedItems with confirmed items
+    /// When opening the container, populate selectedItems with confirmed items
     if (isExpanded) {
       selectedItems.clear();
       selectedItems.addAll(confirmedItems);
@@ -70,7 +80,7 @@ abstract class _DataSelectionStore<T> with Store {
   void setExpansion(bool value) {
     isExpanded = value;
 
-    // When opening the container, populate selectedItems with confirmed items
+    /// When opening the container, populate selectedItems with confirmed items
     if (isExpanded) {
       selectedItems.clear();
       selectedItems.addAll(confirmedItems);
@@ -84,18 +94,19 @@ abstract class _DataSelectionStore<T> with Store {
     } else {
       selectedItems.add(item);
     }
-    // Force notification of observers
+
+    /// Force notification of observers
     selectedItems = ObservableList<T>.of(selectedItems);
   }
 
   @action
   void confirmSelection() {
-    // Replace confirmedItems with current selectedItems
+    /// Replace confirmedItems with current selectedItems
     confirmedItems.clear();
     confirmedItems.addAll(selectedItems);
 
-    // Keep selectedItems as is (don't clear) so they remain selected in UI
-    // selectedItems will be cleared when container is closed or when setExpansion(false) is called
+    /// Keep selectedItems as is (don't clear) so they remain selected in UI
+    /// selectedItems will be cleared when container is closed or when setExpansion(false) is called
   }
 
   @action
@@ -104,9 +115,14 @@ abstract class _DataSelectionStore<T> with Store {
     selectedItems.remove(item); // Also remove from selectedItems if present
   }
 
+  /// Clears all temporary selections.
+  ///
+  /// This removes any items that were selected but not yet confirmed.
+  /// Use this when the user cancels a selection operation
+
   @action
   void clearTemporarySelections() {
-    // Call this when closing the container without confirming
+    /// Call this when closing the container without confirming
     selectedItems.clear();
     selectedItems.addAll(confirmedItems);
   }
@@ -114,7 +130,8 @@ abstract class _DataSelectionStore<T> with Store {
   @action
   void closeContainer() {
     isExpanded = false;
-    // Reset selectedItems to only show confirmed items
+
+    /// Reset selectedItems to only show confirmed items
     selectedItems.clear();
   }
 
@@ -122,7 +139,7 @@ abstract class _DataSelectionStore<T> with Store {
     return selectedItems.contains(item);
   }
 
-  // Use this method in your UI instead of checking both lists separately
+  /// Use this method in your UI instead of checking both lists separately
   bool isItemSelected(T item) {
     return selectedItems.contains(item);
   }
@@ -130,6 +147,11 @@ abstract class _DataSelectionStore<T> with Store {
   bool isItemConfirmed(T item) {
     return confirmedItems.contains(item);
   }
+
+  /// A list of all currently active (selected) items.
+  ///
+  /// This contains the final set of items that the user has
+  /// confirmed in the multi-select dropdown.
 
   @computed
   ObservableList<T> get allActiveItems =>
