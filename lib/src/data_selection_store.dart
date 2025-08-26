@@ -47,11 +47,6 @@ abstract class _DataSelectionStore<T> with Store {
   @observable
   ObservableList<T> confirmedItems = ObservableList<T>.of([]);
 
-  // @action
-  // void setSearchQuery(String query) {
-  //   searchQuery = query;
-  // }
-
   @action
   void setSearchQuery(String query) {
     if (_debounce?.isActive ?? false) _debounce!.cancel();
@@ -132,11 +127,6 @@ abstract class _DataSelectionStore<T> with Store {
     return selectedItems.contains(item);
   }
 
-  // For debugging - you can remove this later
-  @action
-  void debugPrintState() {
-    //For Debug Purpose
-  }
 
   bool isItemConfirmed(T item) {
     return confirmedItems.contains(item);

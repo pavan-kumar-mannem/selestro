@@ -180,17 +180,6 @@ mixin _$DataSelectionStore<T> on _DataSelectionStore<T>, Store {
   }
 
   @override
-  void debugPrintState() {
-    final _$actionInfo = _$_DataSelectionStoreActionController.startAction(
-        name: '_DataSelectionStore.debugPrintState');
-    try {
-      return super.debugPrintState();
-    } finally {
-      _$_DataSelectionStoreActionController.endAction(_$actionInfo);
-    }
-  }
-
-  @override
   String toString() {
     return '''
 searchQuery: ${searchQuery},
