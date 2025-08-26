@@ -12,3 +12,6 @@
 
 ## 1.0.3
 - Adding screenshots clearly and visibly
+
+## 1.0.4
+- Adding Comments for the Code to undertand the functionality
