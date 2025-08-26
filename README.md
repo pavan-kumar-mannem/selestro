@@ -40,11 +40,10 @@ Built with **MobX** for reactive state management, smooth animations, and form v
 
 ### Example
 
-|                                                   |                                                   |
-| ------------------------------------------------- | ------------------------------------------------- |
-| <img src="screenshots/image.png" width="250"/>    | <img src="screenshots/image(1).png" width="250"/> |
-| <img src="screenshots/image(2).png" width="250"/> | <img src="screenshots/image(3).png" width="250"/> |
-
+|                                                   |                                                   |                                                   |
+| ------------------------------------------------- | ------------------------------------------------- | ------------------------------------------------- |
+| <img src="screenshots/image.png" width="220"/>    | <img src="screenshots/image(1).png" width="220"/> | <img src="screenshots/image(2).png" width="220"/> |
+| <img src="screenshots/image(3).png" width="220"/> |                                                   |                                                   |
 
 
 ---
@@ -55,7 +54,7 @@ Add this to your package’s `pubspec.yaml` file:
 
 ```yaml
 dependencies:
-  custom_multi_search: ^1.0.2
+  custom_multi_search: ^1.0.3
 ```
 
 Then run:

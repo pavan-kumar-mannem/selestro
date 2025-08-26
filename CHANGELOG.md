@@ -9,3 +9,6 @@
 
 ## 1.0.2
 - Readme.md file version update correctly
+
+## 1.0.3
+- Adding screenshots clearly and visibly
