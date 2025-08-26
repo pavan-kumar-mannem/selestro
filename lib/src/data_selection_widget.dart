@@ -446,7 +446,7 @@ class _DataSelectionWidgetState<T> extends State<DataSelectionWidget<T>> {
               ),
               const SizedBox(width: 8),
               const Text(
-                'selected_items',
+                'Selected Items',
               ),
               const SizedBox(width: 8),
               if (widget.store.confirmedItems.isNotEmpty)

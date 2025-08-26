@@ -67,8 +67,7 @@ class _ExampleScreenState extends State<ExampleScreen> {
                 labelStr: 'Select Fruits',
                 nameExtractor: (item) => item.name,
                 onChanged: (selectedItems) {
-                  print(
-                      'Selected items: ${selectedItems.map((e) => e.name).toList()}');
+                 selectedItems.map((e) => e.name).toList();
                 },
                 isMandatory: true,
               ),

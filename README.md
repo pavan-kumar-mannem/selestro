@@ -34,7 +34,12 @@ Built with **MobX** for reactive state management, smooth animations, and form v
 
 ## 📸 Preview
 
-> *(Add a screenshot or GIF here to showcase how the widget looks in action)*
+### Example 1
+![Multi search demo](screenshots/image.png)
+![Multi search demo](screenshots/image(1).png)
+![Multi search demo](screenshots/image(2).png)
+![Multi search demo](screenshots/image(3).png)
+
 
 ---
 
