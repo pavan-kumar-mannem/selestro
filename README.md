@@ -2,8 +2,8 @@
 
 [![Pub Version](https://img.shields.io/pub/v/custom_multi_search.svg)](https://pub.dev/packages/custom_multi_search)
 [![Pub Points](https://img.shields.io/pub/points/custom_multi_search)](https://pub.dev/packages/custom_multi_search/score)
-[![Popularity](https://img.shields.io/pub/popularity/custom_multi_search)](https://pub.dev/packages/custom_multi_search)
-[![License](https://img.shields.io/github/license/your-username/custom_multi_search.svg)](LICENSE)
+[![likes](https://img.shields.io/pub/likes/custom_multi_search)](https://pub.dev/packages/custom_multi_search/score)
+[![License](https://img.shields.io/github/license/pavan-kumar-mannem/selestro.svg)](LICENSE)
 
 A **customizable multi-select dropdown widget with search functionality** for Flutter applications.  
 Built with **MobX** for reactive state management, smooth animations, and form validation support.
