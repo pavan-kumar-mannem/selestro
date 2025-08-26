@@ -6,3 +6,6 @@
 
 ## 1.0.1
 - Adding example screnshots 
+
+## 1.0.2
+- Readme.md file version update correctly

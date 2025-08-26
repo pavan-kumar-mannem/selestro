@@ -49,7 +49,7 @@ Add this to your package’s `pubspec.yaml` file:
 
 ```yaml
 dependencies:
-  custom_multi_search: ^1.0.1
+  custom_multi_search: ^1.0.2
 ```
 
 Then run:
