@@ -1,3 +1,5 @@
-## 0.0.1
+## 1.0.0
 
-* TODO: Describe initial release.
+- Initial release of the package.
+- Added multi-select dropdown with search functionality.
+- Integrated with MobX for state management.
