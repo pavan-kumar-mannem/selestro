@@ -11,13 +11,17 @@ Built with **MobX** for reactive state management, smooth animations, and form v
 ---
 
 ## 📖 Table of Contents
-- [Features](#-features)
-- [Preview](#-preview)
-- [Installation](#-installation)
-- [Usage](#-usage)
-- [Parameters](#-parameters)
-- [Contributing](#-contributing)
-- [License](#-license)
+- [Custom Multi Search](#custom-multi-search)
+  - [📖 Table of Contents](#-table-of-contents)
+  - [✨ Features](#-features)
+  - [📸 Preview](#-preview)
+    - [Example](#example)
+  - [🚀 Installation](#-installation)
+  - [🛠 Usage](#-usage)
+  - [⚙️ Parameters](#️-parameters)
+  - [🤝 Contributing](#-contributing)
+  - [📜 License](#-license)
+  - [🙌 Acknowledgments](#-acknowledgments)
 
 ---
 
@@ -35,10 +39,12 @@ Built with **MobX** for reactive state management, smooth animations, and form v
 ## 📸 Preview
 
 ### Example
-<img src="screenshots/image.png" width="300"/>
-<img src="screenshots/image(1).png" width="300"/>
-<img src="screenshots/image(2).png" width="300"/>
-<img src="screenshots/image(3).png" width="300"/>
+
+|                                                   |                                                   |
+| ------------------------------------------------- | ------------------------------------------------- |
+| <img src="screenshots/image.png" width="250"/>    | <img src="screenshots/image(1).png" width="250"/> |
+| <img src="screenshots/image(2).png" width="250"/> | <img src="screenshots/image(3).png" width="250"/> |
+
 
 
 ---
@@ -94,14 +100,14 @@ class ExamplePage extends StatelessWidget {
 
 ## ⚙️ Parameters
 
-| Property       | Type                        | Description |
-|----------------|-----------------------------|-------------|
-| `items`        | `List<T>`                   | The list of items to display in the dropdown. |
-| `onChanged`    | `Function(List<T>)`         | Callback when items are selected/deselected. |
-| `hintText`     | `String`                    | Placeholder text shown when no selection is made. |
-| `validator`    | `FormFieldValidator<List<T>>?` | For form validation. |
-| `chipBuilder`  | `Widget Function(T)`        | Customize the display of selected items. |
-| `itemBuilder`  | `Widget Function(T)`        | Customize how items are displayed in the dropdown. |
+| Property      | Type                           | Description                                        |
+| ------------- | ------------------------------ | -------------------------------------------------- |
+| `items`       | `List<T>`                      | The list of items to display in the dropdown.      |
+| `onChanged`   | `Function(List<T>)`            | Callback when items are selected/deselected.       |
+| `hintText`    | `String`                       | Placeholder text shown when no selection is made.  |
+| `validator`   | `FormFieldValidator<List<T>>?` | For form validation.                               |
+| `chipBuilder` | `Widget Function(T)`           | Customize the display of selected items.           |
+| `itemBuilder` | `Widget Function(T)`           | Customize how items are displayed in the dropdown. |
 
 ---
 
