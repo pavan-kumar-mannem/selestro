@@ -127,7 +127,6 @@ abstract class _DataSelectionStore<T> with Store {
     return selectedItems.contains(item);
   }
 
-
   bool isItemConfirmed(T item) {
     return confirmedItems.contains(item);
   }

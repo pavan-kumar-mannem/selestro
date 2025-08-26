@@ -34,11 +34,11 @@ Built with **MobX** for reactive state management, smooth animations, and form v
 
 ## 📸 Preview
 
-### Example 1
-![Multi search demo](screenshots/image.png)
-![Multi search demo](screenshots/image(1).png)
-![Multi search demo](screenshots/image(2).png)
-![Multi search demo](screenshots/image(3).png)
+### Example
+<img src="screenshots/image.png" width="300"/>
+<img src="screenshots/image(1).png" width="300"/>
+<img src="screenshots/image(2).png" width="300"/>
+<img src="screenshots/image(3).png" width="300"/>
 
 
 ---
