@@ -1,9 +1,10 @@
 name: custom_multi_search
 description: A customizable multi-select dropdown widget with search functionality for Flutter applications using MobX state management.
 version: 1.0.0
-homepage: https://github.com/your-username/your-package-repo
-repository: https://github.com/your-username/your-package-repo
-issue_tracker: https://github.com/your-username/your-package-repo/issuesh
+homepage: https://github.com/pavan-kumar-mannem/selestro
+repository:  https://github.com/pavan-kumar-mannem/selestro
+issue_tracker:  https://github.com/pavan-kumar-mannem/selestro/issues
+license: MIT
 
 environment:
   sdk: ">=3.0.0 <4.0.0"
