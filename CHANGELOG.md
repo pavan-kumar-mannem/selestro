@@ -18,3 +18,6 @@
  
 ## 1.0.5
 - Remove the Container which is rendered initially while no items are selected to  utilize the space effectively
+
+## 1.0.6
+- Reduce the Space aftet the widget to optimise the UI

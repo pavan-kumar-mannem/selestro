@@ -76,7 +76,10 @@ class _DataSelectionWidgetState<T> extends State<DataSelectionWidget<T>> {
     final colorScheme = theme.colorScheme;
 
     return Container(
-      margin: const EdgeInsets.all(16),
+      margin: const EdgeInsets.symmetric(
+        horizontal: 16,
+        vertical: 4,
+      ),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
@@ -115,15 +118,24 @@ class _DataSelectionWidgetState<T> extends State<DataSelectionWidget<T>> {
                   : const SizedBox.shrink(),
             ),
           ),
-          const SizedBox(height: 20),
-          if (widget.errorMsg != null)
+          if (widget.errorMsg != null) ...[
+            const SizedBox(height: 20),
             Padding(
               padding: const EdgeInsets.only(bottom: 8),
               child: Text(
                 widget.errorMsg!,
               ),
             ),
-          _buildConfirmedItems(context, colorScheme),
+          ],
+          Observer(
+            builder: (context) {
+              if( (widget.store.confirmedItems.isNotEmpty)) {
+                return _buildConfirmedItems(context, colorScheme);
+              } else {
+                return const SizedBox.shrink();
+              }
+            }
+          ),
         ],
       ),
     );
@@ -387,7 +399,7 @@ class _DataSelectionWidgetState<T> extends State<DataSelectionWidget<T>> {
               children: [
                 Observer(
                   builder: (_) => Text(
-                    '${widget.store.selectedItems.length} selected}',
+                    '${widget.store.selectedItems.length} selected',
                   ),
                 ),
                 Observer(
