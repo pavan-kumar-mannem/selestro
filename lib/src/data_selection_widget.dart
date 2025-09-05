@@ -373,7 +373,7 @@ class _DataSelectionWidgetState<T> extends State<DataSelectionWidget<T>> {
             ),
           ),
           Container(
-            padding: const EdgeInsets.all(16),
+            padding: const EdgeInsets.all(8),
             decoration: BoxDecoration(
               border: Border(
                 top: BorderSide(
@@ -437,19 +437,19 @@ class _DataSelectionWidgetState<T> extends State<DataSelectionWidget<T>> {
       builder: (_) => Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Row(
-            children: [
-              Icon(
-                Icons.check_circle_rounded,
-                size: 24,
-                color: colorScheme.primary,
-              ),
-              const SizedBox(width: 8),
-              const Text(
-                'Selected Items',
-              ),
-              const SizedBox(width: 8),
-              if (widget.store.confirmedItems.isNotEmpty)
+          if (widget.store.confirmedItems.isNotEmpty)
+            Row(
+              children: [
+                Icon(
+                  Icons.check_circle_rounded,
+                  size: 24,
+                  color: colorScheme.primary,
+                ),
+                const SizedBox(width: 8),
+                const Text(
+                  'Selected Items',
+                ),
+                const SizedBox(width: 8),
                 Container(
                   padding:
                       const EdgeInsets.symmetric(horizontal: 8, vertical: 4),
@@ -461,8 +461,8 @@ class _DataSelectionWidgetState<T> extends State<DataSelectionWidget<T>> {
                     '${widget.store.confirmedItems.length}',
                   ),
                 ),
-            ],
-          ),
+              ],
+            ),
           const SizedBox(height: 16),
           widget.store.confirmedItems.isNotEmpty
               ? AnimatedContainer(
@@ -496,36 +496,7 @@ class _DataSelectionWidgetState<T> extends State<DataSelectionWidget<T>> {
                     }).toList(),
                   ),
                 )
-              : Container(
-                  padding: const EdgeInsets.all(24),
-                  decoration: BoxDecoration(
-                    color: colorScheme.surface,
-                    borderRadius: BorderRadius.circular(8),
-                    border: Border.all(
-                      color: colorScheme.outline.withValues(alpha: 0.2),
-                      width: 1,
-                    ),
-                  ),
-                  child: Center(
-                    child: Column(
-                      children: [
-                        Icon(
-                          Icons.inbox_rounded,
-                          size: 48,
-                          color: colorScheme.onSurface.withValues(alpha: 0.3),
-                        ),
-                        const SizedBox(height: 12),
-                        const Text(
-                          'No items selected yet',
-                        ),
-                        const SizedBox(height: 4),
-                        const Text(
-                          'Start by searching and selecting items above',
-                        ),
-                      ],
-                    ),
-                  ),
-                ),
+              : const SizedBox.shrink()
         ],
       ),
     );

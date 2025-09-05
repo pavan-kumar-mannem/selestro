@@ -15,3 +15,6 @@
 
 ## 1.0.4
 - Adding Comments for the Code to undertand the functionality
+ 
+## 1.0.5
+- Remove the Container which is rendered initially while no items are selected to  utilize the space effectively
